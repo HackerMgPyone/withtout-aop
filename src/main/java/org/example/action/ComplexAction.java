@@ -33,7 +33,8 @@ public class ComplexAction {
         FormattedReport formattedReport = reportFormatter.format(report);
         logger.end(performanceLoggerInfo);
 
-        performanceLoggerInfo = logger.start("reportRepository.format(report)");
+        performanceLoggerInfo = logger.start("reportRepository"+
+                ".save(formattedReport)");
         reportRepository.save(formattedReport);
         logger.end(performanceLoggerInfo);
     }
